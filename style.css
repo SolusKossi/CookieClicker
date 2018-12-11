@@ -109,6 +109,12 @@ button:hover{
   top: 300px;      /*top: calc(50% - 75px);*/
   left: calc(50% - 75px);
   z-index: 0;
+  -webkit-animation: pulse2 3s ease-out;
+  -moz-animation: pulse2 3s ease-out;
+  animation: pulse2 3s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .mainClick:hover{
@@ -158,7 +164,7 @@ button:hover{
   border-radius: 50%;
   width: 250px;
   height: 250px;
-   -webkit-animation: pulse 3s ease-out;
+  -webkit-animation: pulse 3s ease-out;
   -moz-animation: pulse 3s ease-out;
   animation: pulse 3s ease-out;
   -webkit-animation-iteration-count: infinite;
@@ -203,6 +209,41 @@ button:hover{
     opacity: 0.0;
  }
 }
+
+
+@-moz-keyframes pulse2 {
+  0% {
+     -webkit-transform: scale(0.8);
+     opacity: 0.0;
+  }
+
+  25% {
+     -webkit-transform: scale(1);
+     opacity: 0.5;
+  }
+  100% {
+     -webkit-transform: scale(1.2);
+     opacity: 0.0;
+  }
+}
+
+@-webkit-keyframes "pulse2" {
+ 0% {
+    -webkit-transform: scale(0.8);
+    opacity: 0.8;
+ }
+
+ 25% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+ }
+ 100% {
+    -webkit-transform: scale(0.8);
+    opacity: 0.8;
+ }
+}
+
+
 
 @media only screen and (max-width: 650px) {
     body {
